@@ -1,11 +1,18 @@
 #include "binary_trees.h"
 
+unsigned char is_leaf(const binary_tree_t *node);
+size_t depth(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
+const binary_tree_t *get_leaf(const binary_tree_t *tree);
+int is_perfect_recursive(const binary_tree_t *tree,
+		size_t leaf_depth, size_t level);
 
 /**
  * is_leaf - Checks if node is a binary tree leaf.
  * @node: pointer to node to be checked
  * Return: If node is a leaf - 1 or otherwise - 0
  */
+
 unsigned char is_leaf(const binary_tree_t *node)
 {
 	return ((node->left == NULL && node->right == NULL) ? 1 : 0);
@@ -28,7 +35,7 @@ size_t depth(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	if (tree == nullptr)
+	if (tree == NULL)
 		return (0);
 	return (is_perfect_recursive(tree, depth(get_leaf(tree)), 0));
 }
