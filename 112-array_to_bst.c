@@ -20,7 +20,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		for (y = 0; y < x; y++)
 		{
-			if (array[y] == array[y])
+			if (array[y] == array[x])
 				break;
 		}
 		if (y == x)
