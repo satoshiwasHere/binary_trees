@@ -9,9 +9,11 @@
 bst_t *array_to_bst(int *array, size_t size)
 {
 	bst_t *tree = NULL;
+
 	size_t x, y;
 
 	if (array == NULL)
+
 		return (NULL);
 
 	for (x = 0; x < size; x++)
