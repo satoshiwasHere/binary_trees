@@ -23,17 +23,17 @@ int binary_tree_is_leaf(const binary_tree_t *node)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t x, y;
+	size_t left, right;
 
 	if (tree == NULL)
 		return (0);
-	x =
-		binary_tree_height(tree->x);
-	y =
-		binary_tree_height(tree->y);
-	if (x >= y)
-		return (1 + x);
-	return (1 + y);
+	left =
+		binary_tree_height(tree->left);
+	right =
+		binary_tree_height(tree->right);
+	if (left >= right)
+		return (1 + left);
+	return (1 + right);
 }
 
 /**
