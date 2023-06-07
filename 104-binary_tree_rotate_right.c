@@ -5,6 +5,7 @@
  * @tree: pointer to the subject tree root node
  * Return: pointer to the new root node post rotation.
  */
+
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 {
 	binary_tree_t *node, *xy;
