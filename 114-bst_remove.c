@@ -2,7 +2,7 @@
 /**
  * successor - returns min value of BST
  * @node: tree to be check
- * 
+ *
  * Return: the minimum value of the tree
  */
 int successor(bst_t *node)
@@ -29,7 +29,7 @@ int successor(bst_t *node)
  * value in the right-side subtree,
  * replace the node value for successor
  * @root: node that has 2 children
- * 
+ *
  * Return: value found
  */
 int two_children(bst_t *root)
@@ -41,9 +41,10 @@ int two_children(bst_t *root)
 	return (new_v);
 }
 /**
- *remove_type - removes a node depending on children
- *@root: node to be removed
- *Return: 0 - if no children, alternative value
+ * remove_type - removes a node depending on children
+ * @root: node to be removed
+ *
+ * Return: 0 - if no children, alternative value
  */
 int remove_type(bst_t *root)
 {
@@ -58,7 +59,7 @@ int remove_type(bst_t *root)
 		free(root);
 		return (0);
 	}
-	else if((!root->left && root->right) ||
+	else if ((!root->left && root->right) ||
 			(!root->right && root->left))
 	{
 		if
@@ -89,6 +90,7 @@ int remove_type(bst_t *root)
  * bst_remove - deletes node from a tree
  * @root: pointer to root node
  * @value: node with the value to be removed
+ *
  * Return: tree
  */
 bst_t *bst_remove(bst_t *root, int value)
